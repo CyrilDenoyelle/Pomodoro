@@ -10,8 +10,12 @@ $(document).ready(function(){
 			$('title').html(type);
 			if (type === 'Pomodoro'){
 				thingtodo = prompt('que fair ?');
-				$('body').append($('<div/#tache>').html(thingtodo));
-				console.log(thingtodo);
+				if(thingtodo !== null){
+					$('div').attr('class', 'fait');
+					$('.fait').css('text-decoration', 'line-through');
+					$('body').append($("<div/class='tache'>").html(thingtodo));	
+					console.log(thingtodo);
+				}
 			}
 			dur = parseInt(dur);
 			sec = 0;
